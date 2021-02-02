@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Melba Marazo
+{% endblock %}
+
+
+{% block main %}
+
+        <div class="header">
+            <h4>Melba Marazo  Agente Inmobiliario  996 348 766</h4><br>
+        </div>
+
+        <div class="flex-container">
+          <div style="flex-grow: 4">Terrenos Barranca Manzana M Virgen de Chapi</div>
+          <div style="flex-grow: 2"> 156 US$/m2 </div>
+          <div style="flex-grow: 1"> Venta lotes individuales o total </div>
+          <div style="flex-grow: 1"> Zona urbana consolidada </div>
+          <div style="flex-grow: 2"> 140 a 175 m2</div>
+        </div>
+
+    <h2 style="text-align:center">Galer&iacutea</h2>
+
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 5</div>
+        <img src="/static/AI4/AI4a.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 5</div>
+        <img src="/static/AI4/AI4b.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 5</div>
+        <img src="/static/AI4/AI4c.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 5</div>
+        <img src="/static/AI4/AI4d.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 5</div>
+        <img src="/static/AI4/AI4e.jpg" style="width:100%">
+      </div>
+    
+    
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+       <p id="caption"></p>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="/static/AI4/AI4a.jpg" style="width:100%" onclick="currentSlide(1)" alt="Vista lotes L12 y L13">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI4/AI4b.jpg" style="width:100%" onclick="currentSlide(2)" alt="Vista frontal lotes L12 y L13">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI4/AI4c.jpg" style="width:100%" onclick="currentSlide(3)" alt="Vista frontal lotes L16 y L17">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI4/AI4d.jpg" style="width:100%" onclick="currentSlide(4)" alt="Vista frontal lotes L16 y L17">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI4/AI4e.jpg" style="width:100%" onclick="currentSlide(5)" alt="Vista lotes L12 y L13 hacia Ca. Virgen de Chapi">
+        </div>
+      </div>
+    </div>
+
+        <h5>Ubicación</h5>
+        <img src="/static/AI4u1.jpg" alt="Ubicación terrenos" style="width:100%;">
+        <h6></h6>
+        <img src="/static/AI4u2.jpg" alt="Ubicación terrenos" style="width:100%;">
+        <h6></h6>
+        <img src="/static/AI4/AI4u3.jpg" alt="Ubicación terrenos" style="width:100%;">
+        <p></p>
+        
+    <h5>Video</h5>       
+    <video width="100%" height="auto" controls>
+      <source src={{ url_for('static', filename="Video Mz M.MP4") }} type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    
+        <h3> </h3><h3>Desarrollo</h3>
+        <p>Los lotes se encuentran en una zona urbana consolidada con tendencia a la saturación</p>
+        <p>En el gráfico se aprecia la evolución del desarrollo urbano de la zona</p>
+        <p>En base a esto, si se está evaluando efectuar una inversión en terrenos, nuestra recomendación es hacerla este año</p>
+        <img src="/static/ComparacionBarranca.jpg" alt="Evolución urbana" style="width:100%;"> 
+        <h6></h6>        
+        <input type="button" onclick="history.back()" name="volver al inicio" value="volver al inicio">
+
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
+{% endblock %}
+

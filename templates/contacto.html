@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Contacto
+{% endblock %}
+
+
+{% block main %}
+
+    <script>
+        function greet()
+        {
+            let name = document.querySelector('#name').value;
+            if (name === '')
+            {
+                name = ' ';
+            }
+            document.querySelector('#result').innerHTML = ' Gracias, ' + name + ', nos pondremos en contacto pronto';
+        }
+        
+        function disableButton()
+        {
+          var submit = document.getElementById('submit');
+          submit.disabled = true;
+          submit.innerText = 'Enviado.....'
+        }
+    </script>
+
+        <div class="header">
+            <h3>Llena los campos necesarios para que pueda contactarte y responder tus consultas o ayudarte en colocar tu predio</h3><br>
+        </div>
+
+
+    <form action="/contacto" method="post" onsubmit="greet();disableButton();">
+
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" name="name" id="name" placeholder="Nombre *">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" name="apellidos" id="apellidos" placeholder="Apellidos *">
+          </div>
+        </div>
+
+        <div id="result">
+            
+        </div>
+        <br>
+
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Teléfono</label>
+          <input class="form-control" name="telefono" id="exampleFormControlInput0" type="text">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Dirección de correo</label>
+          <input type="email" class="form-control" name="correo" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
+        </div>
+
+
+
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Dejanos tus consultas u opiniones</label>
+          <textarea class="form-control" name="comentario" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <h7>* Campo obligatorio</h7>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <button type="submit" id="submit" class="btn btn-primary">Enviar</button>
+          </div>
+          <div class="col">
+            <input type="button" onclick="history.back()" name="volver al inicio" value="volver al inicio">
+          </div>
+        </div>
+        <br>
+
+   </form>
+
+{% endblock %}
+
+
