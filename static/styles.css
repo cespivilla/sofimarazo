@@ -1,0 +1,240 @@
+/* Create two unequal columns that floats next to each other */
+    .column {
+        float: left;
+        padding: 0px;
+    }
+
+/* Left column */
+    .column.back50 {
+        width: 55%;
+        height: 400px;
+        background-image: url('Melba.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+/* Other column */
+    .column.cincuenta {
+        width: 45%;
+        text-align: center;
+        padding: 30px;
+    }  
+
+/* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+/* Style the header */
+    .header {
+        background-color: OldLace;
+        padding: 20px;
+        text-align: center;
+    }
+
+/* Style the texto1 */
+    .texto1 {
+        padding: 20px;
+        font-family: Candara;
+        text-align: center;
+    }
+
+    .row {
+      margin: 8px -16px;
+    }
+
+/* Add padding BETWEEN each column (if you want) */
+    .row,
+    .row > .column {
+      padding: 8px;
+    }
+
+/* Create three equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 33.33%;
+    }
+
+/* Clear floats after rows */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+/* Content */
+    .content {
+      background-color: white;
+      padding: 10px;
+    }
+
+    .center {
+      top: 50%;
+      text-align: center;
+    }
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 900px) {
+      .column {
+        width: 50%;
+      }
+    }
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+      }
+    }
+
+    .fa {
+      padding: 20px;
+      font-size: 15px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 120px;
+    }
+
+    .fa:hover {
+        opacity: 0.95;
+    }
+
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+
+    .fa-linkedin {
+      background: #007bb5;
+      color: white;
+    }
+
+    .fa-instagram {
+      background: #125688;
+      color: white;
+    }
+
+    .button1 {
+      background-color: Tomato;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 12px;
+      width: 250px;
+      position: fixed;
+      left: 1000px;
+    }
+    
+    button {
+      padding: 20px;
+    }
+
+    .flex-container {
+      display: flex;
+      align-items: stretch;
+    }
+
+    .flex-container > div {
+      margin: 1px;
+      text-align: center;
+      line-height: 60px;
+      font-size: 18px;
+      border-right: 1px solid black;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+/* Position the image container (needed to position the left and right arrows) */
+    .container {
+      position: relative;
+    }
+
+/* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
+/* Add a pointer when hovering over the thumbnail images */
+    .cursor {
+      cursor: pointer;
+    }
+
+/* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+/* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+/* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+/* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+/* Container for image text */
+    .caption-container {
+      text-align: center;
+      background-color: #222;
+      padding: 2px 16px;
+      color: white;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+/* Six columns side by side */
+    .column {
+      float: left;
+      width: 33.33%;
+    }
+
+/* Add a transparency effect for thumnbail images */
+    .demo {
+      opacity: 0.6;
+    }
+
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
+
