@@ -1,0 +1,142 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Agente Inmobiliario
+{% endblock %}
+
+
+{% block main %}
+    <div class="row">
+         <div class="column back50"></div>
+         <div class="column cincuenta" style="font-size: 37px;"><b>Melba Marazo<br><span style="font-size: 18px;">Agente Inmobiliario<br>Remax Pro<br>996 348 766<br>sofimarazo@gmail.com</span></b></div>
+    </div>
+
+    <button class="button1" onclick="document.location='/contacto'">Contactar agente</button><br>
+
+    <div class="header">
+        <h1>Sobre mi</h1>
+        <p><i>"Pienso en mi cliente como alguien a quien debo ayudar a conseguir
+su objetivo y por lo tanto lo primero es comprenderlo como persona humana. La compra y venta inmobiliaria viene después"<br></i></p>
+    </div>
+
+    <div class="texto1">
+        <p>Empecé este fascinante camino justo en el año 2020, año muy particular que todo el mundo recordará, y sin embargo puse mis capacidades y voluntad para ayudar a mis clientes a conseguir el comprador o arrendatario que era lo que ellos necesitaban para rentabilizar sus propiedades.<br>Mis operaciones abarcan desde Lima hasta Barranca en el norte chico de Lima, contando con una cartera de venta de terrenos tanto para vivienda como para uso comercial o de gran industria.</p>
+    </div>
+
+    <div class="header">
+        <h1>Listado de oportunidades</h1>
+    </div>
+
+
+    <div class="row">
+      
+      <div class="column">
+        <div class="content">
+          <a href={{ url_for("ai1")}}><img src='/static/AI1/AI1a.jpg' alt="Terreno-Supe Puerto" style="width:100%"></a>
+          <div class="center">
+             <h5>Venta terreno-Supe Puerto</h5>
+             <p style="font-size:15px;">Antigua Pan Norte límite Supe Puerto con Barranca<br>US$6 401 200<br>49240 m2</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <a href={{ url_for("ai2")}}><img src='/static/AI2/AI2a.jpg' alt="Terreno-Supe Puerto" style="width:100%"></a>
+          <div class="center">
+             <h5>Venta terreno-Supe Puerto</h5>
+             <p style="font-size:15px;">Antigua Pan Norte límite Supe Puerto con Barranca<br>US$5 184 900<br>57610 m2</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <a href={{ url_for("ai3")}}><img src='/static/AI3/AI3a.jpg' alt="Terreno-Supe Puerto" style="width:100%"></a>
+          <div class="center">
+             <h5>Venta terreno-Supe Puerto</h5>
+             <p style="font-size:15px;">Antigua Pan Norte límite Supe Puerto con Barranca<br>US$5 683 500<br>63150 m2</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column">
+        <div class="content">
+          <a href={{ url_for("ai4")}}><img src='/static/AI4/AI4a.jpg' alt="Terrenos Barranca" style="width:100%"></a>
+          <div class="center">
+             <h5>Venta terrenos Barranca Mz M</h5>
+             <p style="font-size:15px;">Virgen de Chapi Mz M lotes L12, L13, L16, L17<br>156 US$/m2<br>140 a 175 m2</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <a href={{ url_for("ai5")}}><img src='/static/AI5/AI5a.jpg' alt="Terrenos Barranca" style="width:100%"></a>
+          <div class="center">
+             <h5>Venta terrenos Barranca Mz LL</h5>
+             <p style="font-size:15px;">Virgen de Chapi Mz LL lotes L11, L12, L13, L14<br>156 US$/m2<br>107 a 114 m2</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <a href={{ url_for("ai6")}}><img src='/static/AI6/AI6c.jpg' alt="Terrenos Barranca" style="width:100%"></a>
+          <div class="center">
+             <h5>Venta terrenos Barranca Mz B</h5>
+             <p style="font-size:15px;">Virgen de Chapi Mz B lotes L11, L12, L13<br>156 US$/m2<br>103 a 140 m2</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <a href={{ url_for("ai7")}}><img src='/static/AI7/AI7a.jpg' alt="Terrenos Barranca" style="width:100%"></a>
+          <div class="center">
+             <h5>Venta terrenos Barranca Mz I</h5>
+             <p style="font-size:15px;">Virgen de Chapi Mz I lotes L18, L19<br>156 US$/m2<br>140 m2 c/u</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <a href={{ url_for("ai8")}}><img src='/static/AI8/AI8b.jpg' alt="Terrenos Barranca" style="width:100%"></a>
+          <div class="center">
+             <h5>Venta terrenos Barranca Mz A</h5>
+             <p style="font-size:15px;">Virgen de Chapi Mz A lotes L11, L17<br>156 US$/m2<br>110 y 150 m2</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <img src='/static/AI11/AI11a.jpg' alt="Depa_San_Miguel" style="width:100%">
+          <div class="center">
+             <h5>Alquiler departamento San Miguel</h5>
+             <p style="font-size:15px;">Av. Costanera 2830<br>S/2200 mes<br>150 m2 piso 14</p>
+          </div>
+         </div>
+       </div>
+
+      <div class="column">
+        <div class="content">
+          <img src='/static/AI12/AI12a.jpg' alt="Alquiler local industrial" style="width:100%">
+          <div class="center">
+             <h5>Alquiler local industrial</h5>
+             <p style="font-size:15px;">Villa El Salvador<br>S/1200 mes<br>250 m2 dos plantas</p>
+          </div>
+         </div>
+       </div>
+
+    </div>
+    
+    <a href="{{ url_for('facebook', user='melba.marazoperea')}}" class="fa fa-facebook">facebook</a>
+    <a href="{{ url_for('linkedin', user='melba-marazo-perea-a230625b')}}" class="fa fa-linkedin">linkedin</a>
+    <a href="{{ url_for('instagram', user='marazoperea?utm_source=qr')}}" class="fa fa-instagram">instagram</a>
+
+{% endblock %}
+
+
