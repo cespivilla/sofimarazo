@@ -5,6 +5,8 @@ from flask_session import Session
 # from flask_session.__init__ import Session
 from datetime import datetime
 from decouple import config
+from github import Github, InputGitAuthor
+import os
 
 subject = 'Formulario'
 server = smtplib.SMTP('smtp.gmail.com', 587)
@@ -26,6 +28,23 @@ print ("Opened database successfully*")
 @app.route("/")
 def index():
     """Show presentacion principal"""
+    print ("token")
+    token = os.getenv('GITHUB_TOKEN', '7c4f35964003346a526378603707a9ad35643f06')
+    file_path = "count.txt"
+    g = Github(token)
+    repo = g.get_repo("cespivilla/sofimarazo")
+    file = repo.get_contents(file_path, ref="main")  # Get file from branch
+    data = file.decoded_content.decode("utf-8")  # Get raw string data
+    count = int(data) + 1
+    data = str(count)  # Modify/Create file
+
+    def push(path, message, content, branch, update=False):
+        author = InputGitAuthor("cespivilla","cespivilla@gmail.com")
+        source = repo.get_branch("main")
+        contents = repo.get_contents(path, ref=branch)  # Retrieve old file to get its SHA and path
+        repo.update_file(contents.path, message, content, contents.sha, branch=branch, author=author) 
+    # Add, commit and push branch
+    push(file_path, "Updating counter.", data, "main", update=True)
     return render_template("index.html")
 
 @app.route("/contacto", methods=["GET", "POST"])
