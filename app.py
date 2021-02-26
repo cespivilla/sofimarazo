@@ -1,5 +1,4 @@
 import sqlite3
-import smtplib
 from flask import Flask, redirect, render_template, request, session, url_for
 from flask_session import Session
 # from flask_session.__init__ import Session
@@ -7,12 +6,6 @@ from datetime import datetime
 from decouple import config
 from github import Github, InputGitAuthor
 import os
-
-subject = 'Formulario'
-server = smtplib.SMTP('smtp.gmail.com', 587)
-server.starttls()
-
-server.login('augespivilla@gmail.com', config('MAIL_PASSWORD'))
 
 # Configure application
 app = Flask(__name__)
@@ -90,12 +83,6 @@ def contacto():
         conn.commit()
         conn.close()
 
-        mensaje = '{}\n {}\n {}\n {}\n {}\n{}'.format(name, apellidos, telefono, correo, comentario, fecha)
-        print (mensaje)
-        message = 'Subject: {}\n\n {}'.format(subject, mensaje)
-        server.sendmail('augespivilla@gmail.com', 'sofimarazo@gmail.com', message)
-        server.quit()
-        
         # Remain in actual page so user can verifiy the sending of data
         return ("", 204)
 
