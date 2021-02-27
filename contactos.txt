@@ -6,15 +6,3 @@ Correo
 Comentario
 Fecha
 **
-\**\CARLOS
- ESPINOZA
- 966753683
- cespivil@gmail.com
- Prueba de consulta u opinión.
-Ojalá
-2021-02-27 04:53:47.826005\**\**\Pedro
- Espnoza
- 2173435
- petespvlla@gmal.com
- Hola
-2021-02-27 04:59:56.594694\**
