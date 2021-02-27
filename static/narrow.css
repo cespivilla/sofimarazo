@@ -13,7 +13,7 @@
 
 /* Left column background-size_contain para que escale Melba_jpg */
     .column.back50 {
-        width: 55%;
+        width: 53%;
         height: 270px;
         background-image: url('Melba_c.jpg');
         background-size: contain;
@@ -22,7 +22,7 @@
 
 /* Other column */
     .column.cincuenta {
-        width: 45%;
+        width: 47%;
         text-align: center;
         padding: 25px;
     }  
