@@ -83,7 +83,7 @@ def contacto():
         conn.commit()
         conn.close()
 
-        mensaje = '\**\{}\n {}\n {}\n {}\n {}\n{}\**'.format(name, apellidos, telefono, correo, comentario, fecha)
+        mensaje = '\n{}\n{}\n{}\n{}\n{}\n{}\n**'.format(name, apellidos, telefono, correo, comentario, fecha)
         print ("token contacto")
         token = os.getenv('GITHUB_TOKEN')
         file_path = "contactos.txt"
