@@ -21,7 +21,7 @@ print ("Opened database successfully*")
 @app.route("/")
 def index():
     """Show presentacion principal"""
-    print ("token")
+    print ("token index")
     token = os.getenv('GITHUB_TOKEN')
     file_path = "count.txt"
     g = Github(token)
@@ -83,6 +83,24 @@ def contacto():
         conn.commit()
         conn.close()
 
+        mensaje = '**\{}\n {}\n {}\n {}\n {}\n{}**'.format(name, apellidos, telefono, correo, comentario, fecha)
+        print ("token contacto")
+        token = os.getenv('GITHUB_TOKEN')
+        file_path = "contactos.txt"
+        g = Github(token)
+        repo = g.get_repo("cespivilla/sofimarazo")
+        file = repo.get_contents(file_path, ref="main")  # Get file from branch
+        data = file.decoded_content.decode("utf-8")  # Get raw string data
+        data += mensaje  # Modify/Create file
+
+        def push(path, message, content, branch, update=False):
+            author = InputGitAuthor("cespivilla","cespivilla@gmail.com")
+            source = repo.get_branch("main")
+            contents = repo.get_contents(path, ref=branch)  # Retrieve old file to get its SHA and path
+            repo.update_file(contents.path, message, content, contents.sha, branch=branch, author=author) 
+        # Add, commit and push branch
+        push(file_path, "Updating contacts.", data, "main", update=True)    
+        
         # Remain in actual page so user can verifiy the sending of data
         return ("", 204)
 
