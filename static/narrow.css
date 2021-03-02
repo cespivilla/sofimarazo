@@ -118,17 +118,17 @@
       background-color: Tomato;
       border: none;
       color: white;
-      padding: 15px 32px;
+      padding: 10px 8px;
       text-align: center;
       text-decoration: none;
       display: inline-block;
-      font-size: 20px;
+      font-size: 14px;
       margin: 4px 2px;
       cursor: pointer;
       border-radius: 12px;
-      width: 250px;
+      width: 140px;
       position: fixed;
-      left: 1000px;
+      left: 300px;
     }
     
     button {
