@@ -169,3 +169,8 @@ def ai9():
 def ai10():
         # permanecer en la pagina para que usuario revise calmadamente
         return render_template("ai10.html")  
+
+@app.route('/ai11')
+def ai11():
+        # permanecer en la pagina para que usuario revise calmadamente
+        return render_template("ai11.html")  
