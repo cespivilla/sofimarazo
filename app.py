@@ -177,8 +177,8 @@ def ai2():
     # Add, commit and push branch
     push(file_path, "Updating visits ai2", data, "main", update=True) 
 
-        # permanecer en la pagina para que usuario revise calmadamente
-        return render_template("ai2.html")
+    # permanecer en la pagina para que usuario revise calmadamente
+    return render_template("ai2.html")
 
 @app.route('/ai3')
 def ai3():
