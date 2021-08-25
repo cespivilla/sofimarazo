@@ -143,7 +143,7 @@ def ai1():
 
     country, region, latitud, longitud = get_userdata(ip_address)
 
-    mensaje = '{}, {}, {}, {}, {}, {}\n'.format(fecha, ip_adress, country, region, latitud, longitud)
+    mensaje = '{}, {}, {}, {}, {}, {}\n'.format(fecha, ip_address, country, region, latitud, longitud)
     token = os.getenv('GITHUB_TOKEN')
     file_path = "visitas_ai1.txt"
     g = Github(token)
