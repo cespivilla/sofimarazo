@@ -225,13 +225,63 @@ def ai3():
 
 @app.route('/ai4')
 def ai4():
-        # permanecer en la pagina para que usuario revise calmadamente
-        return render_template("ai4.html")
+    fecha = datetime.now()
+    if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
+        ip_address = request.environ['REMOTE_ADDR']
+    else:
+        ip_address = request.environ['HTTP_X_FORWARDED_FOR'] # if behind a proxy
+
+    country, region, latitud, longitud = get_userdata(ip_address)
+
+    mensaje = '{}, {}, {}, {}, {}, {}\n'.format(fecha, ip_address, country, region, latitud, longitud)
+    token = os.getenv('GITHUB_TOKEN')
+    file_path = "visitas_ai4.txt"
+    g = Github(token)
+    repo = g.get_repo("cespivilla/sofimarazo")
+    file = repo.get_contents(file_path, ref="main")  # Get file from branch
+    data = file.decoded_content.decode("utf-8")  # Get raw string data
+    data += mensaje  # Modify/Create file
+
+    def push(path, message, content, branch, update=False):
+        author = InputGitAuthor("cespivilla","cespivilla@gmail.com")
+        source = repo.get_branch("main")
+        contents = repo.get_contents(path, ref=branch)  # Retrieve old file to get its SHA and path
+        repo.update_file(contents.path, message, content, contents.sha, branch=branch, author=author) 
+    # Add, commit and push branch
+    push(file_path, "Updating visits ai4", data, "main", update=True) 
+    
+    # permanecer en la pagina para que usuario revise calmadamente
+    return render_template("ai4.html")
         
 @app.route('/ai5')
 def ai5():
-        # permanecer en la pagina para que usuario revise calmadamente
-        return render_template("ai5.html")      
+    fecha = datetime.now()
+    if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
+        ip_address = request.environ['REMOTE_ADDR']
+    else:
+        ip_address = request.environ['HTTP_X_FORWARDED_FOR'] # if behind a proxy
+
+    country, region, latitud, longitud = get_userdata(ip_address)
+
+    mensaje = '{}, {}, {}, {}, {}, {}\n'.format(fecha, ip_address, country, region, latitud, longitud)
+    token = os.getenv('GITHUB_TOKEN')
+    file_path = "visitas_ai5.txt"
+    g = Github(token)
+    repo = g.get_repo("cespivilla/sofimarazo")
+    file = repo.get_contents(file_path, ref="main")  # Get file from branch
+    data = file.decoded_content.decode("utf-8")  # Get raw string data
+    data += mensaje  # Modify/Create file
+
+    def push(path, message, content, branch, update=False):
+        author = InputGitAuthor("cespivilla","cespivilla@gmail.com")
+        source = repo.get_branch("main")
+        contents = repo.get_contents(path, ref=branch)  # Retrieve old file to get its SHA and path
+        repo.update_file(contents.path, message, content, contents.sha, branch=branch, author=author) 
+    # Add, commit and push branch
+    push(file_path, "Updating visits ai5", data, "main", update=True) 
+    
+    # permanecer en la pagina para que usuario revise calmadamente
+    return render_template("ai5.html")      
         
 @app.route('/ai6')
 def ai6():
@@ -240,8 +290,33 @@ def ai6():
         
 @app.route('/ai7')
 def ai7():
-        # permanecer en la pagina para que usuario revise calmadamente
-        return render_template("ai7.html")        
+    fecha = datetime.now()
+    if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
+        ip_address = request.environ['REMOTE_ADDR']
+    else:
+        ip_address = request.environ['HTTP_X_FORWARDED_FOR'] # if behind a proxy
+
+    country, region, latitud, longitud = get_userdata(ip_address)
+
+    mensaje = '{}, {}, {}, {}, {}, {}\n'.format(fecha, ip_address, country, region, latitud, longitud)
+    token = os.getenv('GITHUB_TOKEN')
+    file_path = "visitas_ai7.txt"
+    g = Github(token)
+    repo = g.get_repo("cespivilla/sofimarazo")
+    file = repo.get_contents(file_path, ref="main")  # Get file from branch
+    data = file.decoded_content.decode("utf-8")  # Get raw string data
+    data += mensaje  # Modify/Create file
+
+    def push(path, message, content, branch, update=False):
+        author = InputGitAuthor("cespivilla","cespivilla@gmail.com")
+        source = repo.get_branch("main")
+        contents = repo.get_contents(path, ref=branch)  # Retrieve old file to get its SHA and path
+        repo.update_file(contents.path, message, content, contents.sha, branch=branch, author=author) 
+    # Add, commit and push branch
+    push(file_path, "Updating visits ai7", data, "main", update=True) 
+    
+    # permanecer en la pagina para que usuario revise calmadamente
+    return render_template("ai7.html")        
         
 @app.route('/ai8')
 def ai8():
@@ -250,28 +325,153 @@ def ai8():
         
 @app.route('/ai9')
 def ai9():
-        # permanecer en la pagina para que usuario revise calmadamente
-        return render_template("ai9.html")
+    fecha = datetime.now()
+    if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
+        ip_address = request.environ['REMOTE_ADDR']
+    else:
+        ip_address = request.environ['HTTP_X_FORWARDED_FOR'] # if behind a proxy
+
+    country, region, latitud, longitud = get_userdata(ip_address)
+
+    mensaje = '{}, {}, {}, {}, {}, {}\n'.format(fecha, ip_address, country, region, latitud, longitud)
+    token = os.getenv('GITHUB_TOKEN')
+    file_path = "visitas_ai9.txt"
+    g = Github(token)
+    repo = g.get_repo("cespivilla/sofimarazo")
+    file = repo.get_contents(file_path, ref="main")  # Get file from branch
+    data = file.decoded_content.decode("utf-8")  # Get raw string data
+    data += mensaje  # Modify/Create file
+
+    def push(path, message, content, branch, update=False):
+        author = InputGitAuthor("cespivilla","cespivilla@gmail.com")
+        source = repo.get_branch("main")
+        contents = repo.get_contents(path, ref=branch)  # Retrieve old file to get its SHA and path
+        repo.update_file(contents.path, message, content, contents.sha, branch=branch, author=author) 
+    # Add, commit and push branch
+    push(file_path, "Updating visits ai9", data, "main", update=True) 
+    
+    # permanecer en la pagina para que usuario revise calmadamente
+    return render_template("ai9.html")
     
 @app.route('/ai10')
 def ai10():
-        # permanecer en la pagina para que usuario revise calmadamente
-        return render_template("ai10.html")  
+    fecha = datetime.now()
+    if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
+        ip_address = request.environ['REMOTE_ADDR']
+    else:
+        ip_address = request.environ['HTTP_X_FORWARDED_FOR'] # if behind a proxy
+
+    country, region, latitud, longitud = get_userdata(ip_address)
+
+    mensaje = '{}, {}, {}, {}, {}, {}\n'.format(fecha, ip_address, country, region, latitud, longitud)
+    token = os.getenv('GITHUB_TOKEN')
+    file_path = "visitas_ai10.txt"
+    g = Github(token)
+    repo = g.get_repo("cespivilla/sofimarazo")
+    file = repo.get_contents(file_path, ref="main")  # Get file from branch
+    data = file.decoded_content.decode("utf-8")  # Get raw string data
+    data += mensaje  # Modify/Create file
+
+    def push(path, message, content, branch, update=False):
+        author = InputGitAuthor("cespivilla","cespivilla@gmail.com")
+        source = repo.get_branch("main")
+        contents = repo.get_contents(path, ref=branch)  # Retrieve old file to get its SHA and path
+        repo.update_file(contents.path, message, content, contents.sha, branch=branch, author=author) 
+    # Add, commit and push branch
+    push(file_path, "Updating visits ai10", data, "main", update=True) 
+    
+    # permanecer en la pagina para que usuario revise calmadamente
+    return render_template("ai10.html")  
 
 @app.route('/ai11')
 def ai11():
-        # permanecer en la pagina para que usuario revise calmadamente
-        return render_template("ai11.html")  
+    fecha = datetime.now()
+    if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
+        ip_address = request.environ['REMOTE_ADDR']
+    else:
+        ip_address = request.environ['HTTP_X_FORWARDED_FOR'] # if behind a proxy
+
+    country, region, latitud, longitud = get_userdata(ip_address)
+
+    mensaje = '{}, {}, {}, {}, {}, {}\n'.format(fecha, ip_address, country, region, latitud, longitud)
+    token = os.getenv('GITHUB_TOKEN')
+    file_path = "visitas_ai11.txt"
+    g = Github(token)
+    repo = g.get_repo("cespivilla/sofimarazo")
+    file = repo.get_contents(file_path, ref="main")  # Get file from branch
+    data = file.decoded_content.decode("utf-8")  # Get raw string data
+    data += mensaje  # Modify/Create file
+
+    def push(path, message, content, branch, update=False):
+        author = InputGitAuthor("cespivilla","cespivilla@gmail.com")
+        source = repo.get_branch("main")
+        contents = repo.get_contents(path, ref=branch)  # Retrieve old file to get its SHA and path
+        repo.update_file(contents.path, message, content, contents.sha, branch=branch, author=author) 
+    # Add, commit and push branch
+    push(file_path, "Updating visits ai11", data, "main", update=True) 
+    
+    # permanecer en la pagina para que usuario revise calmadamente
+    return render_template("ai11.html")  
     
 @app.route('/ai12')
 def ai12():
-        # permanecer en la pagina para que usuario revise calmadamente
-        return render_template("ai12.html")  
+    fecha = datetime.now()
+    if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
+        ip_address = request.environ['REMOTE_ADDR']
+    else:
+        ip_address = request.environ['HTTP_X_FORWARDED_FOR'] # if behind a proxy
+
+    country, region, latitud, longitud = get_userdata(ip_address)
+
+    mensaje = '{}, {}, {}, {}, {}, {}\n'.format(fecha, ip_address, country, region, latitud, longitud)
+    token = os.getenv('GITHUB_TOKEN')
+    file_path = "visitas_ai12.txt"
+    g = Github(token)
+    repo = g.get_repo("cespivilla/sofimarazo")
+    file = repo.get_contents(file_path, ref="main")  # Get file from branch
+    data = file.decoded_content.decode("utf-8")  # Get raw string data
+    data += mensaje  # Modify/Create file
+
+    def push(path, message, content, branch, update=False):
+        author = InputGitAuthor("cespivilla","cespivilla@gmail.com")
+        source = repo.get_branch("main")
+        contents = repo.get_contents(path, ref=branch)  # Retrieve old file to get its SHA and path
+        repo.update_file(contents.path, message, content, contents.sha, branch=branch, author=author) 
+    # Add, commit and push branch
+    push(file_path, "Updating visits ai12", data, "main", update=True) 
+    
+    # permanecer en la pagina para que usuario revise calmadamente
+    return render_template("ai12.html")  
 
 @app.route('/ai13')
 def ai13():
-        # permanecer en la pagina para que usuario revise calmadamente
-        return render_template("ai13.html")  
+    fecha = datetime.now()
+    if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
+        ip_address = request.environ['REMOTE_ADDR']
+    else:
+        ip_address = request.environ['HTTP_X_FORWARDED_FOR'] # if behind a proxy
+
+    country, region, latitud, longitud = get_userdata(ip_address)
+
+    mensaje = '{}, {}, {}, {}, {}, {}\n'.format(fecha, ip_address, country, region, latitud, longitud)
+    token = os.getenv('GITHUB_TOKEN')
+    file_path = "visitas_ai13.txt"
+    g = Github(token)
+    repo = g.get_repo("cespivilla/sofimarazo")
+    file = repo.get_contents(file_path, ref="main")  # Get file from branch
+    data = file.decoded_content.decode("utf-8")  # Get raw string data
+    data += mensaje  # Modify/Create file
+
+    def push(path, message, content, branch, update=False):
+        author = InputGitAuthor("cespivilla","cespivilla@gmail.com")
+        source = repo.get_branch("main")
+        contents = repo.get_contents(path, ref=branch)  # Retrieve old file to get its SHA and path
+        repo.update_file(contents.path, message, content, contents.sha, branch=branch, author=author) 
+    # Add, commit and push branch
+    push(file_path, "Updating visits ai13", data, "main", update=True) 
+    
+    # permanecer en la pagina para que usuario revise calmadamente
+    return render_template("ai13.html")  
 
 @app.route('/ai14')
 def ai14():
