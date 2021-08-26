@@ -6,6 +6,7 @@ from datetime import datetime
 from decouple import config
 from github import Github, InputGitAuthor
 import os
+import requests
 
 # Configure application
 app = Flask(__name__)
