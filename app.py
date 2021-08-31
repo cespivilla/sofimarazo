@@ -52,6 +52,7 @@ def index():
     # Add, commit and push branch
     push(file_path, "Updating counter.", data, "main", update=True)
     
+    fecha = datetime.now()    
     if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
         ip_address = request.environ['REMOTE_ADDR']
     else:
