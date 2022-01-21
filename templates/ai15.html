@@ -1,0 +1,170 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Melba Marazo
+{% endblock %}
+
+
+{% block main %}
+
+        <div class="header">
+            <h4>Melba Marazo  Agente Inmobiliario  996 348 766</h4><br>
+        </div>
+
+        <div class="flex-container">
+          <div style="flex-grow: 4">Alquiler departamento vista al mar</div>
+          <div style="flex-grow: 1"> S/1800 mes </div>
+          <div style="flex-grow: 2"> Incluye estacionamiento </div>
+          <div style="flex-grow: 2"> Zonas internas seguras </div>
+          <div style="flex-grow: 1"> 72 m2</div>
+        </div>
+
+        <h3> </h3><h4>Depa con vista al mar</h4>
+        <p>Costanera 1 5to piso, La Perla</p>
+        <p>Se alquila departamento ubicado en la Av.La Costanera en La Perla, ubicado en el 5to piso, en la 4ta torre, con una hermosa vista al mar, 3 habitaciones alfombradas, 1 sala de estar o estudio, 2 baños, sala comedor con vista al mar. Cocina con muebles arriba y abajo, terma eléctrica.</p>
+        <p>En las áreas comunes: tiene una piscina, zona de parrilla, sala de reuniones, zona de juegos para niños en el 1er piso, vigilancia con cámara 24/7 al ingresar al Condominio, 3 ascensores con sistema de tarjeta</p>
+
+    <h2 style="text-align:center">Galer&iacutea</h2>
+
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 10</div>
+        <img src="/static/AI15/AI15a.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 10</div>
+        <img src="/static/AI15/AI15b.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 10</div>
+        <img src="/static/AI15/AI15c.jpg" style="width:100%">
+      </div>
+    
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 10</div>
+        <img src="/static/AI15/AI15d.jpg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 10</div>
+        <img src="/static/AI15/AI15e.jpg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 10</div>
+        <img src="/static/AI15/AI15f.jpg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">7 / 10</div>
+        <img src="/static/AI15/AI15g.jpg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">8 / 10</div>
+        <img src="/static/AI15/AI15h.jpg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">9 / 10</div>
+        <img src="/static/AI15/AI15i.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">10 / 10</div>
+        <img src="/static/AI15/AI15j.jpg" style="width:100%">
+      </div>
+
+        
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+       <p id="caption"></p>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="/static/AI15/AI15a.jpg" style="width:100%" onclick="currentSlide(1)" alt="Interiores seguros al aire libre">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI15/AI15b.jpg" style="width:100%" onclick="currentSlide(2)" alt="Frontis de ingreso">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI15/AI15c.jpg" style="width:100%" onclick="currentSlide(3)" alt="Sala comedor">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI15/AI15d.jpg" style="width:100%" onclick="currentSlide(4)" alt="Cuarto 1">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI15/AI15e.jpg" style="width:100%" onclick="currentSlide(5)" alt="Cocina">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI15/AI15f.jpg" style="width:100%" onclick="currentSlide(6)" alt="Ascensores con tarjeta">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI15/AI15g.jpg" style="width:100%" onclick="currentSlide(7)" alt="Estacionamientos">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI15/AI15h.jpg" style="width:100%" onclick="currentSlide(8)" alt="Juegos para niños">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI15/AI15i.jpg" style="width:100%" onclick="currentSlide(9)" alt="Farmacia al interior 12h">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI15/AI15j.jpg" style="width:100%" onclick="currentSlide(10)" alt="Acceso estacionamiento por Av. La Paz">
+        </div>
+
+      </div>
+    </div>
+
+        <h5>Ubicación</h5>
+         <img src="/static/AI15/AI15u1.jpg" alt="Ubicación" style="width:100%;">
+        <p></p>
+        
+   
+      
+        <input type="button" onclick="history.back()" name="volver al inicio" value="volver al inicio">
+
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
+{% endblock %}
+

@@ -1,0 +1,163 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Melba Marazo
+{% endblock %}
+
+
+{% block main %}
+
+        <div class="header">
+            <h4>Melba Marazo  Agente Inmobiliario  996 348 766</h4><br>
+        </div>
+
+        <div class="flex-container">
+          <div style="flex-grow: 4">Bonito departamento en excelente zona de SJM</div>
+          <div style="flex-grow: 1"> S/1300 mes </div>
+          <div style="flex-grow: 2"> Vista a la calle </div>
+          <div style="flex-grow: 2"> Dos dormitorios </div>
+          <div style="flex-grow: 1"> 90 m2</div>
+        </div>
+
+        <h3> </h3><h4>Departamento en alquiler San Juan de Miraflores Zona A</h4>
+        <p>Jr Juan Mendizábal, zona A, 2do piso</p>
+        <p>Alquiler de bonito departamento con vista a la calle, en segundo piso, con amplias ventanas, my cerca a paraderos, al cine Star y a Metro</p>
+        <p>Cuenta con dos dormitorios, uno con closet, un baño completo, ambiente para sala comedor, cocina, conexión para lavadora y tendal en el 4to piso.</p>
+
+    <h2 style="text-align:center">Galer&iacutea</h2>
+
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 9</div>
+        <img src="/static/AI18/AI18a.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 9</div>
+        <img src="/static/AI18/AI18b.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 9</div>
+        <img src="/static/AI18/AI18c.jpg" style="width:100%">
+      </div>
+    
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 9</div>
+        <img src="/static/AI18/AI18d.jpg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 9</div>
+        <img src="/static/AI18/AI18e.jpg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 9</div>
+        <img src="/static/AI18/AI18f.jpg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">7 / 9</div>
+        <img src="/static/AI18/AI18g.jpg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">8 / 9</div>
+        <img src="/static/AI18/AI18h.jpg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">9 / 9</div>
+        <img src="/static/AI18/AI18i.jpg" style="width:100%">
+      </div>
+
+
+        
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+       <p id="caption"></p>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="/static/AI18/AI18a.jpg" style="width:100%" onclick="currentSlide(1)" alt="Frontis">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI18/AI18b.jpg" style="width:100%" onclick="currentSlide(2)" alt="Entrada">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI18/AI18c.jpg" style="width:100%" onclick="currentSlide(3)" alt="Sala comedor">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI18/AI18d.jpg" style="width:100%" onclick="currentSlide(4)" alt="Cuarto 1">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI18/AI18e.jpg" style="width:100%" onclick="currentSlide(5)" alt="Cuarto 2">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI18/AI18f.jpg" style="width:100%" onclick="currentSlide(6)" alt="Cocina">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI18/AI18g.jpg" style="width:100%" onclick="currentSlide(7)" alt="Baño completo">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI18/AI18h.jpg" style="width:100%" onclick="currentSlide(8)" alt="Vista del Jr Mendizábal">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI18/AI18i.jpg" style="width:100%" onclick="currentSlide(9)" alt="Vista del Jr Mendizábal">
+        </div>
+
+      </div>
+    </div>
+
+        <h5>Ubicación</h5>
+         <img src="/static/AI18/AI18u1.jpg" alt="Ubicación" style="width:100%;">
+        <p></p>
+        
+   
+      
+        <input type="button" onclick="history.back()" name="volver al inicio" value="volver al inicio">
+
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
+{% endblock %}
+
