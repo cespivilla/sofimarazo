@@ -517,10 +517,10 @@ def ai17():
         # permanecer en la pagina para que usuario revise calmadamente
         return render_template("ai17.html")
 
-@app.route('/ai18')
-def ai18():
+# @app.route('/ai18')
+# def ai18():
         # permanecer en la pagina para que usuario revise calmadamente
-        return render_template("ai18.html")  
+        # return render_template("ai18.html")  
 
 @app.route('/ai19')
 def ai19():
