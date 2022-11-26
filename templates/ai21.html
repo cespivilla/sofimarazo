@@ -1,0 +1,167 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Melba Marazo
+{% endblock %}
+
+
+{% block main %}
+
+        <div class="header">
+            <h4>Melba Marazo  Agente Inmobiliario  996 348 766</h4><br>
+        </div>
+
+        <div class="flex-container">
+          <div style="flex-grow: 4"> Linda casa en venta Urb. Villa Club II Etapa, Carabayllo </div>
+          <div style="flex-grow: 2"> Dos pisos </div>
+          <div style="flex-grow: 1"> 76 m2 AT </div>
+          <div style="flex-grow: 1"> 75 m2 AC </div>
+          <div style="flex-grow: 2"> $75,000 </div>
+        </div>
+
+        <h3> </h3><h4>Linda casa en venta en zona segura</h4>
+        <p> Ubicada en la Urb. Villa Club II Etapa, Carabayllo, con buen clima todo el año</p>
+        <p> La casa es de dos pisos con 76 m2 de área total y 75 m2 de área techada. En el primer piso cuenta con sala comedor, cocina, dos dormitorios, 1 baño, 1 patio, 1 cochera y lavandería.</p>
+        <p>En el segundo piso cuenta con 1 dormitorio, 1 baño, 1 patio interno.</p>
+        <p>Tiene parámetros para tres pisos más azotea. Cuenta con documentación en regla.</p>
+
+    <h2 style="text-align:center">Galer&iacutea</h2>
+
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 10</div>
+        <img src="/static/AI21/AI21a.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 10</div>
+        <img src="/static/AI21/AI21b.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 10</div>
+        <img src="/static/AI21/AI21c.jpg" style="width:100%">
+      </div>
+    
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 10</div>
+        <img src="/static/AI21/AI21d.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">5 / 10</div>
+        <img src="/static/AI21/AI21e.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">6 / 10</div>
+        <img src="/static/AI21/AI21f.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">7 / 10</div>
+        <img src="/static/AI21/AI21g.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">8 / 10</div>
+        <img src="/static/AI21/AI21h.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">9 / 10</div>
+        <img src="/static/AI21/AI21i.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">10 / 10</div>
+        <img src="/static/AI21/AI21j.jpg" style="width:100%">
+      </div>
+
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+       <p id="caption"></p>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="/static/AI21/AI21a.jpg" style="width:100%" onclick="currentSlide(1)" alt="Ingreso a urbanización">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI21/AI21b.jpg" style="width:100%" onclick="currentSlide(2)" alt="Frontis casa">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI21/AI21c.jpg" style="width:100%" onclick="currentSlide(3)" alt="Sala-comedor">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI21/AI21d.jpg" style="width:100%" onclick="currentSlide(4)" alt="Area central">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI21/AI21e.jpg" style="width:100%" onclick="currentSlide(5)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI21/AI21f.jpg" style="width:100%" onclick="currentSlide(6)" alt="Cocina">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI21/AI21g.jpg" style="width:100%" onclick="currentSlide(7)" alt="Baño completo">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI21/AI21h.jpg" style="width:100%" onclick="currentSlide(8)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI21/AI21i.jpg" style="width:100%" onclick="currentSlide(9)" alt="Piscina">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI21/AI21j.jpg" style="width:100%" onclick="currentSlide(10)" alt="Alrededores">
+        </div>
+
+
+
+      </div>
+    </div>
+
+        <h5>Ubicación</h5>
+        <img src="/static/AI21/AI21u1.jpg" alt="Ubicación" style="width:100%;">
+        <p></p>
+        
+   
+        <input type="button" onclick="history.back()" name="volver al inicio" value="volver al inicio">
+
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
+{% endblock %}
+

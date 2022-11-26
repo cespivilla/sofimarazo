@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Melba Marazo
+{% endblock %}
+
+
+{% block main %}
+
+        <div class="header">
+            <h4>Melba Marazo  Agente Inmobiliario  996 348 766</h4><br>
+        </div>
+
+        <div class="flex-container">
+          <div style="flex-grow: 4">Venta de terreno en Huaral, Urb. Santa Hilda, cerca de la carretera Chancay-Huaral</div>
+          <div style="flex-grow: 1"> $35/m2 </div>
+          <div style="flex-grow: 2"> Cerca a carretera </div>
+          <div style="flex-grow: 2"> Nivelado </div>
+          <div style="flex-grow: 1"> 10.98 hectáreas</div>
+        </div>
+
+        <h3> </h3><h4>Oportunidad venta terreno en Huaral</h4>
+        <p>Urb. Santa Hilda, cerca de la carretera Chancay-Huaral</p>
+        <p>El terreno está en una zona que prácticamente se está consolidando como urbana. Es ideal para un proyecto inmobiliario o condominios.</p>
+        <p>O para proyectos de desarrollo industrial. A 8 minutos de la plaza de armas de Huaral y a 12 minutos del futuro megapuerto Chancay. Tiene partida e inscrito en registros publicos</p>
+
+    <h2 style="text-align:center">Galer&iacutea</h2>
+
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 7</div>
+        <img src="/static/AI20/AI20a.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 7</div>
+        <img src="/static/AI20/AI20b.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 7</div>
+        <img src="/static/AI20/AI20c.jpg" style="width:100%">
+      </div>
+    
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 7</div>
+        <img src="/static/AI20/AI20d.jpg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 7</div>
+        <img src="/static/AI20/AI20e.jpg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 7</div>
+        <img src="/static/AI20/AI20f.jpg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">7 / 7</div>
+        <img src="/static/AI20/AI20g.jpg" style="width:100%">
+      </div>
+
+
+        
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+       <p id="caption"></p>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="/static/AI20/AI20a.jpg" style="width:100%" onclick="currentSlide(1)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI20/AI20b.jpg" style="width:100%" onclick="currentSlide(2)" alt="Alrededores">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI20/AI20c.jpg" style="width:100%" onclick="currentSlide(3)" alt="Alrededores">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI20/AI20d.jpg" style="width:100%" onclick="currentSlide(4)" alt="Cerca a centros comerciales">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI20/AI20e.jpg" style="width:100%" onclick="currentSlide(5)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI20/AI20f.jpg" style="width:100%" onclick="currentSlide(6)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI20/AI20g.jpg" style="width:100%" onclick="currentSlide(7)" alt="Uno de los ingresos">
+        </div>
+
+
+
+      </div>
+    </div>
+
+        <h5>Ubicación</h5>
+         <img src="/static/AI20/AI20u1.jpg" alt="Ubicación" style="width:100%;">
+        <p></p>
+        
+   
+      
+        <input type="button" onclick="history.back()" name="volver al inicio" value="volver al inicio">
+
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
+{% endblock %}
+
