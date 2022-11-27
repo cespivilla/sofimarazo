@@ -502,3 +502,13 @@ def ai20():
 def ai21():
         # permanecer en la pagina para que usuario revise calmadamente
         return render_template("ai21.html")  
+
+@app.route('/ai22')
+def ai22():
+        # permanecer en la pagina para que usuario revise calmadamente
+        return render_template("ai22.html")  
+
+@app.route('/ai23')
+def ai23():
+        # permanecer en la pagina para que usuario revise calmadamente
+        return render_template("ai23.html")  
