@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Melba Marazo
+{% endblock %}
+
+
+{% block main %}
+
+        <div class="header">
+            <h4>Melba Marazo  Agente Inmobiliario  996 348 766</h4><br>
+        </div>
+
+        <div class="flex-container">
+          <div style="flex-grow: 4">Venta terreno Urb. El Sol de Huampaní</div>
+          <div style="flex-grow: 2"> 120 m2 </div>
+          <div style="flex-grow: 1"> Cerca a autopista</div>
+          <div style="flex-grow: 1"> Salida a 2 calles </div>
+          <div style="flex-grow: 2"> $60,000</div>
+        </div>
+
+        <h4>Se vende terreno de 120 m2 en la Urbanización El Sol de Huampaní</h4>
+        <p>Esta ubicado en el distrito de Chosica a unos minutos de la Universidad Unión.</p>
+        <p> Si quieres vivir en una zona con un excelente clima y seguridad entonces esta oportunidad es para ti.</p>
+        <p>El Sol de Huampani 3ra etapa, es un proyecto Urbanístico que ya esta en marcha, cuenta con parques y un colegio privado.
+Esta cerca a la autopista Priale y esto hará que sea mas fácil y rápido de llegar a Lima.</p>
+
+    <h2 style="text-align:center">Galer&iacutea</h2>
+
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 5</div>
+        <img src="/static/AI23/AI23a.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 5</div>
+        <img src="/static/AI23/AI23b.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 5</div>
+        <img src="/static/AI23/AI23c.jpg" style="width:100%">
+      </div>
+    
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 5</div>
+        <img src="/static/AI23/AI23d.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">5 / 5</div>
+        <img src="/static/AI23/AI23e.jpg" style="width:100%">
+      </div>
+    
+ 
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+       <p id="caption"></p>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="/static/AI23/AI23a.jpg" style="width:100%" onclick="currentSlide(1)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI23/AI23b.jpg" style="width:100%" onclick="currentSlide(2)" alt="Parques">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI23/AI23c.jpg" style="width:100%" onclick="currentSlide(3)" alt="Colegios">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI23/AI23d.jpg" style="width:100%" onclick="currentSlide(4)" alt="Campos de golf">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI23/AI23e.jpg" style="width:100%" onclick="currentSlide(5)" alt="Universidades">
+        </div>
+      </div>
+
+    </div>
+
+        <h5>Ubicación</h5>
+        <img src="/static/AI23/AI23u1.jpg" alt="Ubicación" style="width:100%;">
+        <p></p>
+        
+   
+        <input type="button" onclick="history.back()" name="volver al inicio" value="volver al inicio">
+
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
+{% endblock %}
+
