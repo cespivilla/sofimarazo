@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Melba Marazo
+{% endblock %}
+
+
+{% block main %}
+
+        <div class="header">
+            <h4>Melba Marazo  Agente Inmobiliario  996 348 766</h4><br>
+        </div>
+
+        <div class="flex-container">
+          <div style="flex-grow: 4"> Venta últimos departamentos en mejor zona de Surquillo</div>
+          <div style="flex-grow: 1"> 3 flats </div>
+          <div style="flex-grow: 2"> 1 duplex </div>
+          <div style="flex-grow: 1"> Flats 65 y 75 m2 </div>
+          <div style="flex-grow: 2"> Duplex 40 m2</div>
+        </div>
+
+        <h3> </h3><h4>Venta últimos departamentos 3 flats y 1 duplex Surquillo límite con Miraflores</h4>
+        <p> Este hermoso proyecto, está ubicado en una de las mejores zonas de Surquillo con avenidas principales cercanas como Tomás Marzano y 
+está en el límite con Miraflores, cerca Wong Aurora, Open Plaza, y a unas cuadras del óvalo Higuereta. Edificio de 8 pisos con 2 departamento cada piso vista a la calle, frente a 
+un parque en una zona muy tranquila, este edificio se caracteriza por contar con una excelente distribución, con estilo innovador y diseño único. Vive en una de 
+las zonas más exclusivas de Surquillo</p>
+        <p> Flat 75 m2: 2 dormitorios, 3 baños, sala&comedor, cocina, una oficina, lavandería, terraza</p>
+        <p> Flat 64.88 m2: dormitorio con closet y walking closet, 2 baños, sala&comedor, cocina equipada, lavandería, terraza, con vista externa</p>
+        <p> Duplex 40 m2: dormitorio con closet y walking closet, sala&comedor, cocina equipada</p>
+        <p> No paga alcabala, cuenta con ascensor </p>
+        <p> Entrega Verano 2023</p>
+
+
+    <h2 style="text-align:center">Galer&iacutea</h2>
+
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 5</div>
+        <img src="/static/AI25/AI25a.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 5</div>
+        <img src="/static/AI25/AI25b.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 5</div>
+        <img src="/static/AI25/AI25c.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 5</div>
+        <img src="/static/AI25/AI25d.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 5</div>
+        <img src="/static/AI25/AI25e.jpg" style="width:100%">
+      </div>
+       
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+       <p id="caption"></p>
+      </div>
+
+      <div class="row">
+
+        <div class="column">
+          <img class="demo cursor" src="/static/AI25/AI25a.jpg" style="width:100%" onclick="currentSlide(1)" alt="Edificio">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI25/AI25b.jpg" style="width:100%" onclick="currentSlide(2)" alt="Ambiente">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI25/AI25c.jpg" style="width:100%" onclick="currentSlide(3)" alt="Cocina">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI25/AI25d.jpg" style="width:100%" onclick="currentSlide(4)" alt="Wong Aurora a 5 minutos">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI25/AI25e.jpg" style="width:100%" onclick="currentSlide(5)" alt="Club Suizo a 5 minutos">
+        </div>
+
+      </div>
+    </div>
+
+        <h5>Ubicación</h5>
+        <img src="/static/AI25/AI25u1.jpg" alt="Ubicación" style="width:100%;">
+        <p></p>
+        
+   
+        <input type="button" onclick="history.back()" name="volver al inicio" value="volver al inicio">
+
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
+{% endblock %}
+

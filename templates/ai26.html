@@ -1,0 +1,136 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Melba Marazo
+{% endblock %}
+
+
+{% block main %}
+
+        <div class="header">
+            <h4>Melba Marazo  Agente Inmobiliario  996 348 766</h4><br>
+        </div>
+
+        <div class="flex-container">
+          <div style="flex-grow: 4"> Venta departamentos en zona residencial top de Surco</div>
+          <div style="flex-grow: 1"> 5 flats </div>
+          <div style="flex-grow: 2"> 1 duplex </div>
+          <div style="flex-grow: 1"> Flats 82, 108 y 152 m2 </div>
+          <div style="flex-grow: 2"> Duplex 139 m2</div>
+        </div>
+
+        <h3> </h3><h4>Venta de departamentos en plano multifamiliar, Santiago de Surco</h4>
+        <p>  En busca de tu nuevo hogar? aquí se tiene departamentos en proyecto MARCONA en Santiago de Surco. Departamentos exclusivos con excelentes 
+acabados solo para clientes con altos estándares. Los departamentos están en una excelente zona residencial de Surco, muy cerca a todo como tiendas , centros comerciales, col'egios, avenidas principales como Aviación, Pedro Venturo, Higuereta y parques donde tú y tu familia puedan pasear y pasar un gran tiempo en familia</p>
+        <p> Flat 152 m2 1er piso: 2 dormitorios, 3 baños, sala de estar, cocina abierta, lavandería, terraza, cuarto de servicio con baño, parrilla, una cochera</p>
+        <p> Flats 82 m2: 2 dormitorios, 2 baños, sala&comedor, cocina abierta, 1 oficina, ascensor directo, balcón, cochera</p>
+        <p> Duplex 139 m2: 1er piso: 3 dormitorios, 2 baños, baño de visita, cocina. 2do piso: sala de estar, 2 terrazas, cuarto y baño de servicio, lavandería, 1 cochera</p>
+        <p> No paga alcabala, cuenta con ascensor. Depósitos US$4000 aparte </p>
+        <p> Empieza en mayo 2023</p>
+
+
+    <h2 style="text-align:center">Galer&iacutea</h2>
+
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img src="/static/AI26/AI26a.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="/static/AI26/AI26b.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="/static/AI26/AI26c.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="/static/AI26/AI26d.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="/static/AI26/AI26e.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="/static/AI26/AI26f.jpg" style="width:100%">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+       <p id="caption"></p>
+      </div>
+
+      <div class="row">
+
+        <div class="column">
+          <img class="demo cursor" src="/static/AI26/AI26a.jpg" style="width:100%" onclick="currentSlide(1)" alt="Edificio">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI26/AI26b.jpg" style="width:100%" onclick="currentSlide(2)" alt="Flats">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI26/AI26c.jpg" style="width:100%" onclick="currentSlide(3)" alt="Flats">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI26/AI26d.jpg" style="width:100%" onclick="currentSlide(4)" alt="Planos 2do piso">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI26/AI26e.jpg" style="width:100%" onclick="currentSlide(5)" alt="Alrededores">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI26/AI26f.jpg" style="width:100%" onclick="currentSlide(6)" alt="Alrededores">
+        </div>
+
+      </div>
+    </div>
+
+        <h5>Ubicación</h5>
+        <img src="/static/AI26/AI26u1.jpg" alt="Ubicación" style="width:100%;">
+        <p></p>
+        
+   
+        <input type="button" onclick="history.back()" name="volver al inicio" value="volver al inicio">
+
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
+{% endblock %}
+

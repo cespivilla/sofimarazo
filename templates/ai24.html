@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Melba Marazo
+{% endblock %}
+
+
+{% block main %}
+
+        <div class="header">
+            <h4>Melba Marazo  Agente Inmobiliario  996 348 766</h4><br>
+        </div>
+
+        <div class="flex-container">
+          <div style="flex-grow: 4"> Ultimos Depas Independizados Y Listos Para Entrega </div>
+          <div style="flex-grow: 1"> 2do piso </div>
+          <div style="flex-grow: 2"> Edificio de 7 pisos </div>
+          <div style="flex-grow: 1"> Financiamiento directo </div>
+          <div style="flex-grow: 2"> 44.10 m2</div>
+        </div>
+
+        <h3> </h3><h4> Venta últimos departamentos Lince, en el centro de la ciudad </h4>
+        <p>  Actualmente, Lince es el corazón de Lima y se ha convertido en una vía de paso obligado para cruzar la ciudad capital. Con  accesos  inmediatos  al  Centro  de  Lima,  San  Isidro,  La  Victoria,  Jesús  María. Su  ubicación  estratégica  a  las  avenidas  principales  como  Av.  Arequipa,  Av. 
+Prolong. Iquitos, Av. Petit Thouars, a dos cuadras del Parque Ruíz Gallo, Municipalidad de Lince, Colegios, Centros de Salud.
+Departamento de estreno de 44.10 m2 con vista interna, Independizados y listos para entrega. Ubicación SEGUNDO PISO.</p>
+        <p> Edificio de siete pisos, con dos sótanos para estacionamiento y depósitos. </p>
+        <p> Cuentan con Sala comedor, 01 habitación, 01 baño completo con ducha, cocina de concepto abierto, zona de lavandería.</p>
+        <p> Contómetro de agua incluido. Cochera aparte </p>
+        <p> No paga alcabala, financiamiento directo </p>
+        <p> Listos para entrega </p>
+
+
+    <h2 style="text-align:center">Galer&iacutea</h2>
+
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img src="/static/AI24/AI24a.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="/static/AI24/AI24b.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="/static/AI24/AI24c.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="/static/AI24/AI24d.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="/static/AI24/AI24e.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="/static/AI24/AI24f.jpg" style="width:100%">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+       <p id="caption"></p>
+      </div>
+
+      <div class="row">
+
+        <div class="column">
+          <img class="demo cursor" src="/static/AI24/AI24a.jpg" style="width:100%" onclick="currentSlide(1)" alt="Edificio">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI24/AI24b.jpg" style="width:100%" onclick="currentSlide(2)" alt="Ambiente">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI24/AI24c.jpg" style="width:100%" onclick="currentSlide(3)" alt="Cocina abierta">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI24/AI24d.jpg" style="width:100%" onclick="currentSlide(4)" alt="Mueblería cocina">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI24/AI24e.jpg" style="width:100%" onclick="currentSlide(5)" alt="Ambiente">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI24/AI24f.jpg" style="width:100%" onclick="currentSlide(6)" alt="Ambiente">
+        </div>
+
+      </div>
+    </div>
+
+        <h5>Ubicación</h5>
+        <img src="/static/AI24/AI24u1.jpg" alt="Ubicación" style="width:100%;">
+        <p></p>
+        
+   
+        <input type="button" onclick="history.back()" name="volver al inicio" value="volver al inicio">
+
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
+{% endblock %}
+
