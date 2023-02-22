@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Melba Marazo
+{% endblock %}
+
+
+{% block main %}
+
+        <div class="header">
+            <h4>Melba Marazo  Agente Inmobiliario  996 348 766</h4><br>
+        </div>
+
+        <div class="flex-container">
+          <div style="flex-grow: 4"> Venta de terreno agrícola en Huaral </div>
+          <div style="flex-grow: 1"> A 2 minutos de la zona urbana </div>
+          <div style="flex-grow: 2"> Con pozo de agua </div>
+          <div style="flex-grow: 1"> Con servicio eléctrico </div>
+          <div style="flex-grow: 2"> 32,453 m2</div>
+        </div>
+
+        <h3> </h3><h4> Venta de terreno de 3.2 Ha en Huaral </h4>
+        <p>  Se vende terreno agrícola con muy buena ubicación, en el sector Garcia Alonso, una excelente oportunidad de inversión para proyectos
+inmobiliarios tales como condominio, casa de campo y otros, cuenta con abundante agua, pozo, punto de luz, de fácil acceso, muy cerca de la carretera,
+ a 8 minutos de la Plaza de Armas, centros comerciales, colegios, mercados y otros.</p>
+        <p> Cuenta con pozo de agua</p>
+        <p> Cuenta con servicio eléctrico </p>
+        <p> Cuenta con documentación en regla </p>
+        <p> Inscrito en Registros Públicos </p>
+
+
+    <h2 style="text-align:center">Galer&iacutea</h2>
+
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 5</div>
+        <img src="/static/AI28/AI28a.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 5</div>
+        <img src="/static/AI28/AI28b.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 5</div>
+        <img src="/static/AI28/AI28c.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 5</div>
+        <img src="/static/AI28/AI28d.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 5</div>
+        <img src="/static/AI28/AI28e.jpg" style="width:100%">
+      </div>
+
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+       <p id="caption"></p>
+      </div>
+
+      <div class="row">
+
+        <div class="column">
+          <img class="demo cursor" src="/static/AI28/AI28a.jpg" style="width:100%" onclick="currentSlide(1)" alt="Plantaciones">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI28/AI28b.jpg" style="width:100%" onclick="currentSlide(2)" alt="Plantaciones">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI28/AI28c.jpg" style="width:100%" onclick="currentSlide(3)" alt="Acceso">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI28/AI28d.jpg" style="width:100%" onclick="currentSlide(4)" alt="Acceso">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI28/AI28e.jpg" style="width:100%" onclick="currentSlide(5)" alt="Portón ingreso">
+        </div>
+
+
+      </div>
+    </div>
+
+        <h5>Ubicación</h5>
+        <img src="/static/AI28/AI28u1.jpg" alt="Ubicación" style="width:100%;">
+        <p></p>
+        
+   
+        <input type="button" onclick="history.back()" name="volver al inicio" value="volver al inicio">
+
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
+{% endblock %}
+
