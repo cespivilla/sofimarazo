@@ -40,8 +40,8 @@ def index():
         ip_address = request.environ['HTTP_X_FORWARDED_FOR'] # if behind a proxy
 
     country, region, latitud, longitud = get_userdata(ip_address)
-    pais = 1
-    if pais == 1:
+    print ('ip address, country', ip_address, country)
+    if country == "Peru":
         """Show presentacion principal"""
         print ("token index")
         token = os.getenv('GITHUB_TOKEN')
