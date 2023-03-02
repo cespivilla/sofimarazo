@@ -537,3 +537,8 @@ def ai28():
 def ai29():
         # permanecer en la pagina para que usuario revise calmadamente
         return render_template("ai29.html")  
+
+@app.route('/ai30')
+def ai30():
+        # permanecer en la pagina para que usuario revise calmadamente
+        return render_template("ai30.html")      
