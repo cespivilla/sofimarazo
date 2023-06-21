@@ -40,7 +40,8 @@ def index():
         ip_address = request.environ['HTTP_X_FORWARDED_FOR'] # if behind a proxy
 
     country, region, latitud, longitud = get_userdata(ip_address)
-    print ('ip address, country', ip_address, country)
+    print ('ip address', ip_address)
+    print ('country', country)
     if country == "Peru":
         """Show presentacion principal"""
         print ("token index")
