@@ -40,6 +40,8 @@ def index():
         ip_address = request.environ['HTTP_X_FORWARDED_FOR'] # if behind a proxy
 
     country, region, latitud, longitud = get_userdata(ip_address)
+    print ('type ip_address ', type(ip_address))
+    print ('len ip_address ', len(ip_address))
     print ('ip address', ip_address)
     print ('country', country)
     if country == "Peru":
