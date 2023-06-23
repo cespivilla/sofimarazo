@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Melba Marazo
+{% endblock %}
+
+
+{% block main %}
+
+        <div class="header">
+            <h4>Melba Marazo  Agente Inmobiliario  996 348 766</h4><br>
+        </div>
+
+        <div class="flex-container">
+          <div style="flex-grow: 4"> Bonito departamento en excelente zona de SJM </div>
+          <div style="flex-grow: 1"> S/1600 mes </div>
+          <div style="flex-grow: 2"> Vista a la calle </div>
+          <div style="flex-grow: 1"> Tres dormitorios </div>
+          <div style="flex-grow: 2"> 75 m2</div>
+        </div>
+
+        <h3> </h3><h4> Departamento en alquiler San Juan de Miraflores Zona A </h4>
+        <p>  Jr. Mariano Carranza, zona A </p>
+        <p> Alquiler de bonito departamento con vista a la calle, con amplias ventanas, my cerca a paraderos, al cine Star y a Metro </p>
+        <p> Se encuentra en el 4to piso y el acceso es por una cómoda escalera </p>
+        <p> 3 habitaciones, 2 baños, 1 cocina amoblada, 1 sala comedor </p>
+        <p> Está a 900 m del Metro de Atocongo y del Mall del Sur </p>
+
+
+    <h2 style="text-align:center">Galer&iacutea</h2>
+
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img src="/static/AI31/AI31a.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="/static/AI31/AI31b.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="/static/AI31/AI31c.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="/static/AI31/AI31d.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="/static/AI31/AI31e.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="/static/AI31/AI31f.jpg" style="width:100%">
+      </div>
+
+ 
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+       <p id="caption"></p>
+      </div>
+
+      <div class="row">
+
+        <div class="column">
+          <img class="demo cursor" src="/static/AI31/AI31a.jpg" style="width:100%" onclick="currentSlide(1)" alt="Cuarto principal">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI31/AI31b.jpg" style="width:100%" onclick="currentSlide(2)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI31/AI31c.jpg" style="width:100%" onclick="currentSlide(3)" alt="Cocina">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI31/AI31d.jpg" style="width:100%" onclick="currentSlide(4)" alt="Cocina">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI31/AI31e.jpg" style="width:100%" onclick="currentSlide(5)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI31/AI31f.jpg" style="width:100%" onclick="currentSlide(6)" alt="Entorno">
+        </div>
+
+
+      </div>
+    </div>
+
+        <h5>Ubicación</h5>
+        <img src="/static/AI31/AI31u1.jpg" alt="Ubicación" style="width:100%;">
+        <p></p>
+        
+   
+        <input type="button" onclick="history.back()" name="volver al inicio" value="volver al inicio">
+
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
+{% endblock %}
+
