@@ -38,12 +38,14 @@ def index():
         ip_address = request.environ['REMOTE_ADDR']
     else:
         ip_address = request.environ['HTTP_X_FORWARDED_FOR'] # if behind a proxy
+    ip_list = ip_address.split(",")
 
-    country, region, latitud, longitud = get_userdata(ip_address)
-    print ('type ip_address ', type(ip_address))
-    print ('len ip_address ', len(ip_address))
-    print ('ip address', ip_address)
-    print ('country', country)
+    country, region, latitud, longitud = get_userdata(ip_list[0])
+
+    print ('ip_address ', ip_address)
+    print ('ip_list[0] ', ip_list[0])
+    print ("country ", country)
+    
     if country == "Peru":
         """Show presentacion principal"""
         print ("token index")
@@ -64,7 +66,7 @@ def index():
         # Add, commit and push branch
         push(file_path, "Updating counter.", data, "main", update=True)
 
-        mensaje = '{}, {}, {}, {}, {}, {}\n'.format(fecha, ip_address, country, region, latitud, longitud)
+        mensaje = '{}, {}, {}, {}, {}, {}\n'.format(fecha, ip_list[0], country, region, latitud, longitud)
 
         file_path = "visitas.txt"
         file = repo.get_contents(file_path, ref="main")  # Get file from branch
@@ -515,4 +517,9 @@ def ai29():
 @app.route('/ai30')
 def ai30():
         # permanecer en la pagina para que usuario revise calmadamente
-        return render_template("ai30.html")   
+        return render_template("ai30.html")  
+
+@app.route('/ai31')
+def ai31():
+        # permanecer en la pagina para que usuario revise calmadamente
+        return render_template("ai31.html")  
