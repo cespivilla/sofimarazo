@@ -315,6 +315,32 @@ def ai18():
 
 @app.route('/ai20')
 def ai20():
+    fecha = datetime.now()
+    if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
+        ip_address = request.environ['REMOTE_ADDR']
+    else:
+        ip_address = request.environ['HTTP_X_FORWARDED_FOR'] # if behind a proxy
+    ip_list = ip_address.split(",")
+
+    country, region, latitud, longitud = get_userdata(ip_list[0])
+    if country == "Peru":
+        mensaje = '{}, {}, {}, {}, {}, {}\n'.format(fecha, ip_list[0], country, region, latitud, longitud)
+        token = os.getenv('GITHUB_TOKEN')
+        file_path = "visitas_ai20.txt"
+        g = Github(token)
+        repo = g.get_repo("cespivilla/sofimarazo")
+        file = repo.get_contents(file_path, ref="main")  # Get file from branch
+        data = file.decoded_content.decode("utf-8")  # Get raw string data
+        data += mensaje  # Modify/Create file
+
+        def push(path, message, content, branch, update=False):
+            author = InputGitAuthor("cespivilla","cespivilla@gmail.com")
+            source = repo.get_branch("main")
+            contents = repo.get_contents(path, ref=branch)  # Retrieve old file to get its SHA and path
+            repo.update_file(contents.path, message, content, contents.sha, branch=branch, author=author) 
+        # Add, commit and push branch
+        push(file_path, "Updating visits ai20", data, "main", update=True) 
+        
         # permanecer en la pagina para que usuario revise calmadamente
         return render_template("ai20.html")  
 
@@ -350,6 +376,31 @@ def ai26():
   
 @app.route('/ai28')
 def ai28():
+    fecha = datetime.now()
+    if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
+        ip_address = request.environ['REMOTE_ADDR']
+    else:
+        ip_address = request.environ['HTTP_X_FORWARDED_FOR'] # if behind a proxy
+    ip_list = ip_address.split(",")
+
+    country, region, latitud, longitud = get_userdata(ip_list[0])
+    if country == "Peru":
+        mensaje = '{}, {}, {}, {}, {}, {}\n'.format(fecha, ip_list[0], country, region, latitud, longitud)
+        token = os.getenv('GITHUB_TOKEN')
+        file_path = "visitas_ai28.txt"
+        g = Github(token)
+        repo = g.get_repo("cespivilla/sofimarazo")
+        file = repo.get_contents(file_path, ref="main")  # Get file from branch
+        data = file.decoded_content.decode("utf-8")  # Get raw string data
+        data += mensaje  # Modify/Create file
+
+        def push(path, message, content, branch, update=False):
+            author = InputGitAuthor("cespivilla","cespivilla@gmail.com")
+            source = repo.get_branch("main")
+            contents = repo.get_contents(path, ref=branch)  # Retrieve old file to get its SHA and path
+            repo.update_file(contents.path, message, content, contents.sha, branch=branch, author=author) 
+        # Add, commit and push branch
+        push(file_path, "Updating visits ai28", data, "main", update=True) 
         # permanecer en la pagina para que usuario revise calmadamente
         return render_template("ai28.html") 
     
