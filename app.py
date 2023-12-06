@@ -225,6 +225,11 @@ def ai2():
     # permanecer en la pagina para que usuario revise calmadamente
     return render_template("ai2.html")
 
+@app.route('/ai3')
+def ai3():
+    # permanecer en la pagina para que usuario revise calmadamente
+    return render_template("ai3.html")
+
 @app.route('/ai4')
 def ai4():
     # permanecer en la pagina para que usuario revise calmadamente
