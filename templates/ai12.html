@@ -1,0 +1,138 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Melba Marazo
+{% endblock %}
+
+
+{% block main %}
+
+        <div class="header">
+            <h4>Melba Marazo  Agente Inmobiliario  996 348 766</h4><br>
+        </div>
+
+        <div class="flex-container">
+          <div style="flex-grow: 4">Terreno playa Av Chorrillos Barranca</div>
+          <div style="flex-grow: 2"> 250000 US$ </div>
+          <div style="flex-grow: 1"> Adyacente a la playa </div>
+          <div style="flex-grow: 1"> Zona urbana consolidada </div>
+          <div style="flex-grow: 2"> 823.34 m2</div>
+        </div>
+
+        <h3> </h3><h4>Oportunidad terreno para casa de playa Barranca</h4>
+        <p>Con una ubicación privilegiada para disfrutar de la comodidad y belleza que ofrece Barranca, en la tranquilidad de la costa.</p>
+        <p>Actualmente el terreno tiene una construcción antigua y pueden evaluar hacer remodelaciones/renovaciones o ejecutar una construcción nueva según proyecto.</p>
+        <p>Documentos en regla e inscritos en RRPP</p>
+
+    <h2 style="text-align:center">Galer&iacutea</h2>
+
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img src="/static/AI12/AI12a.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="/static/AI12/AI12b.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="/static/AI12/AI12c.jpg" style="width:100%">
+      </div>
+    
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="/static/AI12/AI12d.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="/static/AI12/AI12e.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="/static/AI12/AI12f.jpg" style="width:100%">
+      </div>
+    
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+       <p id="caption"></p>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="/static/AI12/AI12a.jpg" style="width:100%" onclick="currentSlide(1)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI12/AI12b.jpg" style="width:100%" onclick="currentSlide(2)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI12/AI12c.jpg" style="width:100%" onclick="currentSlide(3)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI12/AI12d.jpg" style="width:100%" onclick="currentSlide(4)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI12/AI12e.jpg" style="width:100%" onclick="currentSlide(5)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI12/AI12f.jpg" style="width:100%" onclick="currentSlide(6)" alt="">
+        </div>
+
+
+      </div>
+    </div>
+
+        <h5>Ubicación</h5>
+        <img src="/static/AI12/AI12u1.jpg" alt="Ubicación terrenos" style="width:100%;">
+        <p></p>
+        
+    <h5>Video</h5>       
+    <video width="100%" height="auto" controls>
+      <source src={{ url_for('static', filename="casa_playa_chorrillos.mp4") }} type="video/mp4">
+      Your browser does not support the video tag.
+    </video>    
+       
+        <input type="button" onclick="history.back()" name="volver al inicio" value="volver al inicio">
+
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
+{% endblock %}
+
