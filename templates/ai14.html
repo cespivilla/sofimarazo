@@ -1,0 +1,161 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Melba Marazo
+{% endblock %}
+
+
+{% block main %}
+
+        <div class="header">
+            <h4>Melba Marazo  Agente Inmobiliario  996 348 766</h4><br>
+        </div>
+
+        <div class="flex-container">
+          <div style="flex-grow: 4">Venta Terreno En Condominio Exclusivo Esperanza Baja Huaral</div>
+          <div style="flex-grow: 1"> 105000 US$ </div>
+          <div style="flex-grow: 2"> a 15 minutos de la Plaza de Armas de Huaral </div>
+          <div style="flex-grow: 2"> Ideal para casa de campo </div>
+          <div style="flex-grow: 2"> 1071 m2</div>
+        </div>
+
+        <h3> </h3><h4>Terreno en la Esperanza Baja, sector Granados, Huaral</h4>
+        <p>A 15 minutos de la Plaza de Armas de Huaral</p>
+        <p>Ideal para casa de campo, ubicado en condominio exclusivo, con acceso a través de vigilancia 24 horas. Con un área de 1071 m2, con linderos 33.38 m por el norte, 35.21 m por el este, 27.01 m por el sur y 37.12 m por el oeste. Acceso por la vía de ingreso a Esperanza Baja completamente asfaltado, amplio estacionamiento para visitas, cuenta con medidor de luz. Ya dispone de una construcción en casco con dos ambientes</p>
+        <p>Documentos en regla e inscritos en RRPP</p>
+
+    <h2 style="text-align:center">Galer&iacutea</h2>
+
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 10</div>
+        <img src="/static/AI14/AI14a.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 10</div>
+        <img src="/static/AI14/AI14b.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 10</div>
+        <img src="/static/AI14/AI14c.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">4 / 10</div>
+        <img src="/static/AI14/AI14d.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">5 / 10</div>
+        <img src="/static/AI14/AI14e.jpg" style="width:100%">
+      </div>
+   
+      <div class="mySlides">
+        <div class="numbertext">6 / 10</div>
+        <img src="/static/AI14/AI14f.jpg" style="width:100%">
+      </div>
+   
+      <div class="mySlides">
+        <div class="numbertext">7 / 10</div>
+        <img src="/static/AI14/AI14g.jpg" style="width:100%">
+      </div>
+   
+      <div class="mySlides">
+        <div class="numbertext">8 / 10</div>
+        <img src="/static/AI14/AI14h.jpg" style="width:100%">
+      </div>
+   
+      <div class="mySlides">
+        <div class="numbertext">9 / 10</div>
+        <img src="/static/AI14/AI14i.jpg" style="width:100%">
+      </div>
+   
+      <div class="mySlides">
+        <div class="numbertext">10 / 10</div>
+        <img src="/static/AI14/AI14j.jpg" style="width:100%">
+      </div>
+        
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+       <p id="caption"></p>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="/static/AI14/AI14a.jpg" style="width:100%" onclick="currentSlide(1)" alt="Vía de ingreso">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI14/AI14b.jpg" style="width:100%" onclick="currentSlide(2)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI14/AI14c.jpg" style="width:100%" onclick="currentSlide(3)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI14/AI14d.jpg" style="width:100%" onclick="currentSlide(4)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI14/AI14e.jpg" style="width:100%" onclick="currentSlide(5)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI14/AI14f.jpg" style="width:100%" onclick="currentSlide(6)" alt="Construcción actual">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI14/AI14g.jpg" style="width:100%" onclick="currentSlide(7)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI14/AI14h.jpg" style="width:100%" onclick="currentSlide(8)" alt="Estacionamiento visitas">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI14/AI14i.jpg" style="width:100%" onclick="currentSlide(9)" alt="Instalaciones comunes">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/static/AI14/AI14j.jpg" style="width:100%" onclick="currentSlide(10)" alt="Ingreso desde la vía pública">
+        </div>
+      </div>
+    </div>
+
+        <h5>Ubicación</h5>
+        <img src="/static/AI14/AI14u1.jpg" alt="Ubicación terrenos" style="width:100%;">
+        <p></p>
+        
+        <h6></h6>        
+        <input type="button" onclick="history.back()" name="volver al inicio" value="volver al inicio">
+
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
+{% endblock %}
+
